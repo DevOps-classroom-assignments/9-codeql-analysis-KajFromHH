@@ -56,4 +56,4 @@ jobs:
         run: docker build -t go-web-server .
 
       - name: Run docker image
-        run: docker run -p 8080 -it --rm go-web-server
+        run: docker run -p 8080:8080 -it --rm go-web-server
