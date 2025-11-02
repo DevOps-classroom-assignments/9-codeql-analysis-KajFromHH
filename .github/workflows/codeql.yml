@@ -50,7 +50,7 @@ jobs:
     # Define steps to build and run the Docker container
     steps:
       - name: Build docker image
-        run: docker build -t go-web-server .
+        run: docker build -t go-web-server ./Dockerfile
 
       - name: Run docker image
         run: docker run -p 8080 -it --rm go-web-server
