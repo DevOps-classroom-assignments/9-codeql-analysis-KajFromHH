@@ -27,7 +27,7 @@ jobs:
           - language: go
             build-mode: autobuild
     steps:
-    - name: Checkout repository
+    - name: Find and checkout repository
       uses: actions/checkout@v4
 
     - name: Initialize CodeQL
@@ -49,6 +49,9 @@ jobs:
 
     # Define steps to build and run the Docker container
     steps:
+      - name: Find and check repository
+        uses: actions/checkout@v4 
+
       - name: Build docker image
         run: docker build -t go-web-server ./Dockerfile
 
