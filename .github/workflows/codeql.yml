@@ -59,4 +59,4 @@ jobs:
         run: docker run -p 8080:8080 -d go-web-server
       
       - name: Stop and remove docker container
-        run: docker stop --rm go-web-server 
+        run: docker stop go-web-server && docker rm go-web-server 
